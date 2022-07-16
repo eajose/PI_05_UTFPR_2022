@@ -1,0 +1,37 @@
+{% block content%}
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/theme.css')}}">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.5.1/dist/leaflet.css" integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ==" crossorigin="" />
+    <script src="https://unpkg.com/leaflet@1.5.1/dist/leaflet.js" integrity="sha512-GffPMF3RvMeYyc1LWMHtK8EbPv0iNZ8/oTtHPx9/cc2ILxQ+u905qIwdpULaqDkyBKgOaB57QTMg7ztg8Jm2Og==" crossorigin=""></script>
+    <script src="{{url_for('static', filename= 'js/leaflet-providers.js')}}"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/v4-shims.css">
+
+    <title>CryptoGames</title>
+</head>
+<body>
+    <div class="sidenav">
+    </div>
+    <div class="sidenav-separator"></div>
+    <div class="map-content">
+        <div class="custom-popup" id="map">
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+            <script src="{{url_for('static', filename='js/map.js')}}"></script>
+            <script>
+                {% for marker in markers %}
+                    L.marker([{{ marker['lat'] }}, {{ marker['lon'] }}]).addTo(map)
+                    .bindPopup("{{ marker['popup'] }}")
+                    .openPopup();
+                {% endfor %}
+            </script>
+            <script src="{{url_for('static', filename='js/script2.js')}}"></script>
+        </div>
+    </div>
+</body>
+</html>
+{% endblock %} 
