@@ -1,3 +1,15 @@
 flask==0.12.2
 pipdeptree==2.1.0
 Jinja2==3.1.2
+
+# Demais bibliotecas
+pathlib==1.0.1
+requests==2.25.1
+bs4==0.0.1
+beautifulsoup4==4.9.3
+ftpretty==0.3.5
+pandas==1.3.2
+XlsxWriter==3.0.1
+pandas
+pytrends
+pyshp
