@@ -8,7 +8,7 @@ def map_polygon():
     try:
         markers = search(request.form.get('trend'))
         return render_template('map.html', markers=markers)
-    except:
+    except KeyError:
         return render_template('map.html')
 
 

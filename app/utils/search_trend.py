@@ -47,11 +47,11 @@ def search(trend):
     context = []
     
     for index, row in df.iterrows():
-        valor = {
-            'lat':state_list[index][0],
-            'lon':state_list[index][1],
-            'popup': f"{index} - {row[trend]}"
-            }
-
-        context.append(valor)
+        if row[trend] > 0:
+            valor = {
+                'lat':state_list[index][0],
+                'lon':state_list[index][1],
+                'popup': f"{index} - {row[trend]}"
+                }
+            context.append(valor)
     return context
