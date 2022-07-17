@@ -1,23 +1,18 @@
+# Listar árvore de pacotes instalados
 pipdeptree==2.1.0
 
 # Demais bibliotecas
-flask
-Jinja2
-pathlib==1.0.1
-requests==2.25.1
-bs4==0.0.1
-beautifulsoup4==4.9.3
+alive-progress==2.4.1
+cx-Freeze==6.11.1
+Flask==2.1.3
 ftpretty==0.3.5
+geopandas==0.11.0
+halo==0.0.31
+Jinja2==3.1.2
+pathlib==1.0.1
 pandas==1.3.2
-XlsxWriter==3.0.1
-pandas
-pytrends
-pyshp
-
-# Teste
-alive-progress
-cx_freeze
-Shapely
-geopandas
-halo
-topojson
+pyshp==2.3.0
+pytrends==4.8.0
+requests==2.25.1
+Shapely==1.8.2
+topojson==1.4
