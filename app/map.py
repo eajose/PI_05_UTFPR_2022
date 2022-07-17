@@ -1,22 +1,11 @@
-from flask import Flask, render_template
-
+from flask import Flask, render_template, request
+from .utils.search_trend import search
 
 app = Flask(__name__)
 
-@app.route("/")
-def home():
-    return "Homepage"
-
-
-@app.route('/inicio')
+@app.route('/', methods=["GET", "POST"])
 def map_polygon():
-    markers=[
-        {
-        'lat':-1.397746, 
-        'lon':-48.473087,
-        'popup':'This is the middle of the map.'
-        }
-    ]
+    markers = search(request.form.get('trend'))
     return render_template('map.html', markers=markers)
 
 

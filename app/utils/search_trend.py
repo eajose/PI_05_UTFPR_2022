@@ -3,8 +3,8 @@ import pandas as pd
 from pytrends.request import TrendReq
 
 
-def buscar_trend(trend):
-    lista = {
+def search(trend):
+    state_list = {
         "Acre": [ -8.77, -70.55], 
         "Alagoas": [ -9.71, -35.73], 
         "Amazonas": [ -3.07, -61.66], 
@@ -46,15 +46,13 @@ def buscar_trend(trend):
         )
     
     context = []
+    
     for index, row in df.iterrows():
         valor = {
-            'lat':lista[index][0],
-            'lon':lista[index][1],
+            'lat':state_list[index][0],
+            'lon':state_list[index][1],
             'popup': f"{index} - {row[trend]}"
             }
 
         context.append(valor)
     return context
-
-x = buscar_trend('Dogecoin')
-print(x)
