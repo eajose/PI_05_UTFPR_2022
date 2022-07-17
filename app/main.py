@@ -1,12 +1,15 @@
 from flask import Flask, render_template, request
-from .utils.search_trend import search
+from utils.search_trend import search
 
 app = Flask(__name__)
 
 @app.route('/', methods=["GET", "POST"])
 def map_polygon():
-    markers = search(request.form.get('trend'))
-    return render_template('map.html', markers=markers)
+    try:
+        markers = search(request.form.get('trend'))
+        return render_template('map.html', markers=markers)
+    except:
+        return render_template('map.html')
 
 
 if __name__ == "__main__":

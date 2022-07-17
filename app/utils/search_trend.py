@@ -1,4 +1,3 @@
-# docker-compose run --rm app python3 utils/pesquisa.py
 import pandas as pd
 from pytrends.request import TrendReq
 

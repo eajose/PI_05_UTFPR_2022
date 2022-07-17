@@ -1,8 +1,8 @@
-flask==0.12.2
 pipdeptree==2.1.0
-Jinja2==3.1.2
 
 # Demais bibliotecas
+flask
+Jinja2
 pathlib==1.0.1
 requests==2.25.1
 bs4==0.0.1
