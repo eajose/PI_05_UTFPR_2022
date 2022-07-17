@@ -9,7 +9,7 @@ var satellite = L.tileLayer.provider('MapBox', {
 
 var map = L.map('map', {
     center: [-1.5173293363818698, -48.669914202657196],
-    zoom: 3.4,
+    zoom: 3.5,
     layers: [satellite, streets]
 });
 
