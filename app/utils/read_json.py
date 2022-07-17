@@ -1,3 +1,4 @@
+# docker-compose run --rm app python3 utils/read_json.py
 import json
 
 f = open('utils/brazil-states.geojson')
