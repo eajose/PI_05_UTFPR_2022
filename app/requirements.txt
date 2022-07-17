@@ -13,3 +13,11 @@ XlsxWriter==3.0.1
 pandas
 pytrends
 pyshp
+
+# Teste
+alive-progress
+cx_freeze
+Shapely
+geopandas
+halo
+topojson
