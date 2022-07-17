@@ -133,7 +133,7 @@ h4 {
 }
 
 .custom-popup .leaflet-popup-content-wrapper {
-    background:#6f8194;
+    background-color:rgb(73, 75, 77);
     color:#fff;
     border-radius: 5px;
     height: 100%;
@@ -142,11 +142,19 @@ h4 {
     }
 
 .custom-popup .leaflet-popup-content-wrapper a {
-    color:rgba(255,255,255,0.1);
-    }
+    background-color: transparent;    
+}
 
+.table{
+    color: white !important;
+}
 
 #scrollbar{
     overflow-y:auto;
     max-height: 200px;
+}
+
+.logo-utfpr {
+    bottom: 0px !important;
+    position: fixed;
 }

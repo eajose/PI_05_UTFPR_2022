@@ -13,12 +13,15 @@
 {% block content%}
 <body>
     <div class="sidenav">
-        <img class="one" src="static/img/CryptoGames_2.png" width="300" height="150">
+        <img class="ml-4 py-1 my-1" src="static/img/CryptoGames_2.png" width="250" height="80">
         <form method="post">
-            <label for="trend" class='m-2 trend h4'>Trend</label>
-            <input type="text" name="trend" id="trend" class="form-control" />
+            <label for="trend" class='m-2 trend h4'>Pesquisar (Google Trends)</label>
+            <input type="text" name="trend" id="trend" class="form-control" placeholder="Insira um termo de pesquisa." />
             <input class="btn btn-secondary m-2" type="submit">
         </form>
+        <div class="logo-utfpr">
+            <img class="logo-utfpr ml-4 py-1 my-1" src="static/img/logo-utfpr.png" width="250" height="80">
+        </div>
     </div>
     <div class="sidenav-separator"></div>
     <div class="map-content">
@@ -28,7 +31,7 @@
             <script>
                 {% for marker in markers %}
                     L.polygon({{ marker['polygon'] }}).addTo(map)
-                    .bindPopup("{{ marker['popup'] }}")
+                    .bindPopup("<table class='table table-hover'><thead><th class='text-center'>Estado</th><th class='text-center text-nowrap'>Volume de busca</th></thead><tr><td class='text-center text-nowrap'>{{ marker['popup'].split(' - ')[0] }}</td><td class='text-center'>{{ marker['popup'].split(' - ')[1] }}</td></table>")
                     .openPopup();
                 {% endfor %}
             </script>
