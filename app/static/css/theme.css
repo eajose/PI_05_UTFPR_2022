@@ -190,7 +190,7 @@ h4 {
 }
 
 .logo-container-echo {
-    background-image: url("../static/logo_hydro.svg");
+    background-image: url("{{url_for('static', filename='icons/CryptoGames_2.png')}}");
     background-repeat: no-repeat;
     background-position: center;
     margin-top: 36px;
